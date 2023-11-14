@@ -89,7 +89,7 @@
     # privacy
     mullvad-vpn
     # gnome
-    gnomeExtensions.mullvad-indicator
+    gnomeExtensions.appindicator 
     gnome.gnome-tweaks
   ];
 
