@@ -83,6 +83,10 @@
     htop
     vim 
     wget
+    # development
+    python311
+    poetry
+    # privacy
     mullvad-vpn
     # gnome
     gnomeExtensions.mullvad-indicator
