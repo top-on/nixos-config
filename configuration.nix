@@ -61,7 +61,7 @@
   users.users.thor = {
     isNormalUser = true;
     description = "thor";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       thunderbird
       keepassxc
@@ -86,6 +86,7 @@
     # development
     python311
     poetry
+    docker-compose
     # privacy
     mullvad-vpn
     # gnome
@@ -103,6 +104,8 @@
     };
     mullvad-vpn.enable=true;
   };
+
+  virtualisation.docker.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
