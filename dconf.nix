@@ -6,7 +6,12 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
     "ca/desrt/dconf-editor" = {
+      saved-pathbar-path = "/";
+      saved-view = "/";
       show-warning = false;
+      window-height = 500;
+      window-is-maximized = false;
+      window-width = 540;
     };
 
     "org/gnome/Console" = {
@@ -54,8 +59,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-gnome-console" "gnome-network-panel" "signal-desktop" "org-gnome-characters" "gnome-power-panel" ];
+      application-children = [ "org-gnome-console" "gnome-network-panel" "signal-desktop" "org-gnome-characters" "gnome-power-panel" "brave-browser" ];
       show-banners = true;
+    };
+
+    "org/gnome/desktop/notifications/application/brave-browser" = {
+      application-id = "brave-browser.desktop";
     };
 
     "org/gnome/desktop/notifications/application/gnome-network-panel" = {
@@ -139,10 +148,21 @@ with lib.hm.gvariant;
 
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "mullvadindicator@pobega.github.com" ];
+      disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "mullvadindicator@pobega.github.com" "unite@hardpixel.eu" "user-theme@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" "appindicatorsupport@rgcjonas.gmail.com" ];
       favorite-apps = [ "brave-browser.desktop" "org.gnome.Console.desktop" "org.gnome.Epiphany.desktop" "org.gnome.Geary.desktop" "org.gnome.Calendar.desktop" "org.gnome.Music.desktop" "org.gnome.Photos.desktop" "org.gnome.Nautilus.desktop" ];
       welcome-dialog-last-shown-version = "44.2";
+    };
+
+    "org/gnome/shell/extensions/unite" = {
+      autofocus-windows = true;
+      enable-titlebar-actions = true;
+      extend-left-box = false;
+      hide-activities-button = "auto";
+      hide-window-titlebars = "always";
+      restrict-to-primary-screen = true;
+      show-desktop-name = true;
+      show-legacy-tray = true;
     };
 
     "org/gnome/shell/world-clocks" = {
