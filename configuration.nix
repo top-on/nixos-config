@@ -109,7 +109,7 @@
   home-manager.users.thor = { pkgs, ... }: {
     home.packages = [ pkgs.atool pkgs.httpie ];
     programs.bash.enable = true;
-
+    imports = [ ./dconf.nix ];
     home.stateVersion = "23.05";
   };
 
