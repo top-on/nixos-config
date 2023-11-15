@@ -92,6 +92,8 @@
     # gnome
     gnomeExtensions.appindicator 
     gnome.gnome-tweaks
+    gnome.dconf-editor
+    dconf2nix
   ];
 
   # List services that you want to enable:
