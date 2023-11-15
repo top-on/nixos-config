@@ -19,8 +19,13 @@ with lib.hm.gvariant;
       last-window-size = mkTuple [ 732 529 ];
     };
 
+    "org/gnome/Totem" = {
+      active-plugins = [ "recent" "screensaver" "variable-rate" "save-file" "rotation" "autoload-subtitles" "vimeo" "mpris" "skipto" "movie-properties" "open-directory" "apple-trailers" "screenshot" ];
+      subtitle-encoding = "UTF-8";
+    };
+
     "org/gnome/control-center" = {
-      last-panel = "background";
+      last-panel = "sound";
       window-state = mkTuple [ 980 640 ];
     };
 
@@ -139,6 +144,10 @@ with lib.hm.gvariant;
       migrated = true;
     };
 
+    "org/gnome/mutter" = {
+      edge-tiling = true;
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "list-view";
       migrated-gtk-settings = true;
@@ -166,10 +175,19 @@ with lib.hm.gvariant;
 
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "mullvadindicator@pobega.github.com" "unite@hardpixel.eu" "user-theme@gnome-shell-extensions.gcampax.github.com" ];
+      disabled-extensions = [ "places-menu@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "mullvadindicator@pobega.github.com" "unite@hardpixel.eu" "user-theme@gnome-shell-extensions.gcampax.github.com" "pop-shell@system76.com" ];
       enabled-extensions = [ "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" "appindicatorsupport@rgcjonas.gmail.com" ];
-      favorite-apps = [ "brave-browser.desktop" "org.gnome.Console.desktop" "org.gnome.Epiphany.desktop" "org.gnome.Geary.desktop" "org.gnome.Calendar.desktop" "org.gnome.Music.desktop" "org.gnome.Photos.desktop" "org.gnome.Nautilus.desktop" ];
+      favorite-apps = [ "brave-browser.desktop" "signal-desktop.desktop" "org.gnome.Console.desktop" "org.gnome.Epiphany.desktop" "org.gnome.Geary.desktop" "org.gnome.Calendar.desktop" "org.gnome.Music.desktop" "org.gnome.Photos.desktop" "org.gnome.Nautilus.desktop" ];
       welcome-dialog-last-shown-version = "44.2";
+    };
+
+    "org/gnome/shell/extensions/pop-shell" = {
+      active-hint = false;
+      mouse-cursor-follows-active-window = false;
+      show-title = false;
+      smart-gaps = false;
+      snap-to-grid = false;
+      tile-by-default = false;
     };
 
     "org/gnome/shell/extensions/unite" = {
@@ -189,6 +207,11 @@ with lib.hm.gvariant;
 
     "org/gnome/tweaks" = {
       show-extensions-notice = false;
+    };
+
+    "org/gtk/settings/color-chooser" = {
+      custom-colors = [ (mkTuple [ 0.6 0.4 ]) ];
+      selected-color = mkTuple [ true 0.14901960784313725 ];
     };
 
     "org/gtk/settings/file-chooser" = {
