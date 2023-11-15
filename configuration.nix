@@ -104,7 +104,6 @@
     mullvad-vpn.enable=true;
   };
 
-
   # home-manager
   home-manager.users.thor = { pkgs, ... }: {
     home.packages = [ pkgs.atool pkgs.httpie ];
