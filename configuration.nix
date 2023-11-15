@@ -100,7 +100,7 @@ in
     unstable.python311
     unstable.vscode
     # privacy
-    unstable.mullvad-vpn
+    mullvad-vpn
     # gnome
     gnomeExtensions.appindicator 
     gnome.gnome-tweaks
