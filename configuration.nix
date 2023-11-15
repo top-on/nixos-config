@@ -67,12 +67,12 @@ in
     description = "thor";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-      thunderbird
-      keepassxc
-      syncthing
-      brave
-      signal-desktop
-      element-desktop
+      unstable.thunderbird
+      unstable.keepassxc
+      unstable.syncthing
+      unstable.brave
+      unstable.signal-desktop
+      unstable.element-desktop
     ];
   };
 
@@ -95,9 +95,9 @@ in
     wget
     home-manager
     # development
-    python311
-    poetry
     docker-compose
+    unstable.poetry
+    unstable.python311
     unstable.vscode
     # privacy
     unstable.mullvad-vpn
