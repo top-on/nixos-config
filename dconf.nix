@@ -140,7 +140,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/preferences" = {
-      default-folder-viewer = "icon-view";
+      default-folder-viewer = "list-view";
       migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
       search-view = "list-view";
