@@ -15,7 +15,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "usage";
+      last-panel = "keyboard";
       window-state = mkTuple [ 980 640 ];
     };
 
@@ -100,6 +100,13 @@ with lib.hm.gvariant;
     "org/gnome/desktop/sound" = {
       event-sounds = false;
       theme-name = "__custom";
+    };
+
+    "org/gnome/desktop/wm/keybindings" = {
+      switch-applications = [];
+      switch-applications-backward = [];
+      switch-windows = [ "<Alt>Tab" ];
+      switch-windows-backward = [ "<Shift><Alt>Tab" ];
     };
 
     "org/gnome/evolution-data-server" = {
