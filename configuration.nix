@@ -104,7 +104,6 @@
     mullvad-vpn.enable=true;
   };
 
-  virtualisation.docker.enable = true;
 
   # home-manager
   home-manager.users.thor = { pkgs, ... }: {
@@ -114,5 +113,7 @@
     home.stateVersion = "23.05";
   };
 
+  # general settings
+  virtualisation.docker.enable = true;
   system.stateVersion = "23.05"; 
 }
