@@ -20,7 +20,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "keyboard";
+      last-panel = "background";
       window-state = mkTuple [ 980 640 ];
     };
 
@@ -43,6 +43,15 @@ with lib.hm.gvariant;
       categories = [ "X-SuSE-YaST" ];
       name = "suse-yast.directory";
       translate = true;
+    };
+
+    "org/gnome/desktop/background" = {
+      color-shading-type = "solid";
+      picture-options = "zoom";
+      picture-uri = "file:///nix/store/l4m1j5dqaw1gi962k7yp29yfl23j0cz5-simple-blue-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-blue.png";
+      picture-uri-dark = "file:///nix/store/b8m7w1f2jq8r34gq8311hrpyyb9p72ra-simple-dark-gray-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-dark-gray.png";
+      primary-color = "#3a4ba0";
+      secondary-color = "#2f302f";
     };
 
     "org/gnome/desktop/input-sources" = {
@@ -102,6 +111,14 @@ with lib.hm.gvariant;
       recent-files-max-age = -1;
     };
 
+    "org/gnome/desktop/screensaver" = {
+      color-shading-type = "solid";
+      picture-options = "zoom";
+      picture-uri = "file:///nix/store/l4m1j5dqaw1gi962k7yp29yfl23j0cz5-simple-blue-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-blue.png";
+      primary-color = "#3a4ba0";
+      secondary-color = "#2f302f";
+    };
+
     "org/gnome/desktop/session" = {
       idle-delay = mkUint32 300;
     };
@@ -126,6 +143,7 @@ with lib.hm.gvariant;
       default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
       search-filter-time-type = "last_modified";
+      search-view = "list-view";
     };
 
     "org/gnome/nautilus/window-state" = {
