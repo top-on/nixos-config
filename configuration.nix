@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -83,6 +84,7 @@
     htop
     vim 
     wget
+    home-manager
     # development
     python311
     poetry
@@ -108,6 +110,14 @@
   };
 
   virtualisation.docker.enable = true;
+
+  # home-manager
+  home-manager.users.thor = { pkgs, ... }: {
+    home.packages = [ pkgs.atool pkgs.httpie ];
+    programs.bash.enable = true;
+
+    home.stateVersion = "23.05";
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
