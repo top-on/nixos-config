@@ -10,7 +10,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Console" = {
-      font-scale = 1.2000000000000002;
+      font-scale = 1.2;
       last-window-size = mkTuple [ 732 529 ];
     };
 
@@ -83,7 +83,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
-      speed = 0.1212121212121211;
+      speed = 0.121212;
       tap-to-click = true;
       two-finger-scrolling-enabled = true;
     };
@@ -107,7 +107,13 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/preferences" = {
+      default-folder-viewer = "icon-view";
       migrated-gtk-settings = true;
+      search-filter-time-type = "last_modified";
+    };
+
+    "org/gnome/nautilus/window-state" = {
+      initial-size = mkTuple [ 890 550 ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
