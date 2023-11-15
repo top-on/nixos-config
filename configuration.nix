@@ -1,5 +1,12 @@
 { config, pkgs, ... }:
 
+# allow unstable packages
+let
+  unstableTarball =
+    fetchTarball
+      https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
+in
+
 {
   imports =
     [
@@ -69,8 +76,15 @@
     ];
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # allow unfree and unstable packages
+  nixpkgs.config = {
+    allowUnfree = true;
+    packageOverrides = pkgs: {
+      unstable = import unstableTarball {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
 
   # packages installed in system profile
   environment.systemPackages = with pkgs; [
@@ -84,8 +98,9 @@
     python311
     poetry
     docker-compose
+    unstable.vscode
     # privacy
-    mullvad-vpn
+    unstable.mullvad-vpn
     # gnome
     gnomeExtensions.appindicator 
     gnome.gnome-tweaks
